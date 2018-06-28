@@ -9,11 +9,11 @@ class App extends Component {
     this.findData=this.findData.bind(this)
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     fetch('http://localhost:3001/cities')
       .then(res => res.json())
       .then(users => this.setState({ users }));
-  }
+  }*/
 
   findData(event) {
     var cityData = JSON.parse(event.target.value);
