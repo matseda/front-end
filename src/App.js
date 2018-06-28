@@ -10,14 +10,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/cities')
+    fetch('http://localhost:3001/cities')
       .then(res => res.json())
       .then(users => this.setState({ users }));
   }
 
   findData(event) {
     var cityData = JSON.parse(event.target.value);
-    fetch('/cities/degrees/'+ cityData.id)
+    fetch('http://localhost:3001/cities/degrees/'+ cityData.id)
       .then(res => res.json())
       .then(info => this.setState({ info }));
     var weatherInfo = JSON.parse(JSON.stringify(this.state.info));
