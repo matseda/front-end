@@ -10,6 +10,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log("Mounting")
     fetch('https://medaback.azurewebsites.net/cities')
       .then(res => res.json())
       .then(users => this.setState({ users }));
