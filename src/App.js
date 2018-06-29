@@ -9,12 +9,12 @@ class App extends Component {
     this.findData=this.findData.bind(this)
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     //console.log("Mounting")
     fetch('https://medaback.azurewebsites.net/cities')
       .then(res => res.json())
       .then(users => this.setState({ users }));
-  }
+  }*/
 
   findData(event) {
     var cityData = JSON.parse(event.target.value);
